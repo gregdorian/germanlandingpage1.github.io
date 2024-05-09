@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212E49;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF8C00;
+}
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    display: flex;
+    animation: slide-up 1s ease;
+}
+
+.profile-picture {
+    flex: 1;
+    overflow: hidden;
+
+}
+
+.profile-picture img {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 10%;
+
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fade-in 1s ease 0.5s forwards;
+}
+
+.name {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0077b6; /* LinkedIn blue color */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .profile-picture {
+        height: 300px;
+    }
+}
